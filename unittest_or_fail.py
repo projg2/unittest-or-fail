@@ -11,7 +11,7 @@ class NonZeroTextTestRunner(TextTestRunner):
 
     def run(self, test):
         result = super().run(test)
-        if result.testsRun == 0:
+        if result.testsRun == 0 and not result.skipped:
             self.stream.writeln("No tests found -- failing")
             sys.exit(3)
         return result

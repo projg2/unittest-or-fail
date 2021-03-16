@@ -33,7 +33,6 @@ class UnittestOrFailTest(TestCase):
     def test_skip_all(self):
         self.assertResult('skip-all', 0)
 
-    @expectedFailure
     def test_skip_setUpClass(self):
         self.assertResult('skip-setupclass', 0)
 
