@@ -2,7 +2,7 @@ import os.path
 import subprocess
 import sys
 
-from unittest import TestCase
+from unittest import TestCase, expectedFailure
 
 
 TEST_DIR = os.path.dirname(__file__)
@@ -32,6 +32,10 @@ class UnittestOrFailTest(TestCase):
 
     def test_skip_all(self):
         self.assertResult('skip-all', 0)
+
+    @expectedFailure
+    def test_skip_setUpClass(self):
+        self.assertResult('skip-setupclass', 0)
 
     def test_no_files(self):
         self.assertResult('no-files', 3)
