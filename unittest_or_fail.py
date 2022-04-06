@@ -1,7 +1,10 @@
 #!/usr/bin/env python
+"""Run unittests or fail if no tests are found"""
 
 import sys
 from unittest import main, TextTestRunner
+
+__version__ = "1"
 
 
 class NonZeroTextTestRunner(TextTestRunner):
