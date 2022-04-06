@@ -4,7 +4,7 @@
 import sys
 from unittest import main, TextTestRunner
 
-__version__ = "1"
+__version__ = "2"
 
 
 class NonZeroTextTestRunner(TextTestRunner):
